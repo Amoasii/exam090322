@@ -56,10 +56,25 @@ const displayTeachers = () => {
                 <div>
                     ${teacher.salary} MDL
                 </div>
+                
+                <button class="teacher__button" onclick="deleteTeacher('${teacher.name}')">
+                    x
+                </button>
             </div>
         `;
     });
 }
+
+// 6. Add functionality that allow user to remove an element with Object type from your Array (10)
+const deleteTeacher = (name) => {
+    let index = teachers.findIndex(teacher => teacher.name === name);
+
+    if (index !== -1) {
+        teachers.splice(index, 1);
+        displayTeachers();
+    }
+}
+
 
 // 5. Add functionality that allow user to add new element with Object type in your Array (10)
 const addTeacher = () => {
@@ -83,7 +98,7 @@ const addTeacher = () => {
     salary.value = '';
 
     displayTeachers();
-    calculateTotal();
+
 }
 
 
