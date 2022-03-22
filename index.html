@@ -9,6 +9,36 @@
 </head>
 <body>
     
+<!-- 5. Add functionality that allow user to add new element with Object type in your Array (10)    -->
+    <form class="adding__form">
+        <details>
+            <summary>Adding a new teacher: </summary>
+            <label>
+                <span>Name</span>
+                <input type="text" class="adding__form-input adding__form-name">
+            </label>
+            <label>
+                <span>School</span>
+                <input type="text" class="adding__form-input adding__form-school">
+            </label>
+            <label>
+                <span>Experience</span>
+                <input type="text" class="adding__form-input adding__form-experience">
+            </label>
+            <label>
+                <span>Salary</span>
+                <input type="text" class="adding__form-input adding__form-salary">
+            </label>
+
+            <button type="button" class="adding__form-button" onclick="addTeacher()">
+                Submit
+            </button>
+        </details>
+    </form>
+
+    <hr>
+
+ <!-- 4. Display Array of Objects in web page, using JavaScript (10) -->
     <div class="teachers">
 
         <div class="teacher teacher__header">
@@ -21,6 +51,7 @@
         <div class="teachers__container"></div>
 
     </div>
+
 
     <script src="main.js"></script>
 </body>

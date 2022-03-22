@@ -61,8 +61,34 @@ const displayTeachers = () => {
     });
 }
 
+// 5. Add functionality that allow user to add new element with Object type in your Array (10)
+const addTeacher = () => {
+    let name = document.querySelector('.adding__form-name');
+    let school = document.querySelector('.adding__form-school');
+    let experience = document.querySelector('.adding__form-experience');
+    let salary = document.querySelector('.adding__form-salary');
+
+    let newTeacher = {
+        name: name.value,
+        school: school.value,
+        experience: +experience.value,
+        salary: +salary.value
+    }
+
+    teachers.push(newTeacher);
+
+    name.value = '';
+    school.value = '';
+    experience.value = '';
+    salary.value = '';
+
+    displayTeachers();
+    calculateTotal();
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
+// 4. Display Array of Objects in web page, using JavaScript (10)
     displayTeachers();
 
 });
