@@ -1,9 +1,14 @@
-# Variant 13
+## Variant 13
 
 **Teacher:** name, school, experience(in years), salary
+
 *calculateTotalSalary* - agregate function
+
 *modifyField* - increase salary by 1000 if experience is > 5 years
+
 *findElements* - find all Teachers for specified school
+
+### Tasks
 
 1. Create a Web aplication with 3 files(HTML, JS and CSS) (1)
 
@@ -23,7 +28,7 @@
 
 9. Create function findElements with condition specified in your variant(use array methods) (10)
 
-* Use localStorage to store data:
+### Use localStorage to store data:
 
 - fill Array of Objects from localStorage (10)
 
