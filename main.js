@@ -76,6 +76,19 @@ const deleteTeacher = (name) => {
     }
 }
 
+// 8. Create function modifyField for field specified in your variant(use array methods) (10)
+const modifySalary = () => {
+    teachers.forEach(teacher => {
+        if (teacher.experience > 5) {
+            teacher.salary += 1000;
+        }
+    });
+
+    displayTeachers();
+    calculateTotal();
+}
+
+
 // 7. Create agregate function calculateTotal for field with mention total from your variant(use array methods) (10)
 const calculateTotal = () => {
     let totalSalary = 0;
