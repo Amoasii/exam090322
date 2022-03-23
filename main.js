@@ -72,9 +72,21 @@ const deleteTeacher = (name) => {
     if (index !== -1) {
         teachers.splice(index, 1);
         displayTeachers();
+        calculateTotal(); //7. Total
     }
 }
 
+// 7. Create agregate function calculateTotal for field with mention total from your variant(use array methods) (10)
+const calculateTotal = () => {
+    let totalSalary = 0;
+
+    teachers.forEach(teacher => {
+        totalSalary += teacher.salary;
+    });
+
+    const total = document.querySelector('.total');
+    total.innerHTML = totalSalary;
+}
 
 // 5. Add functionality that allow user to add new element with Object type in your Array (10)
 const addTeacher = () => {
@@ -98,12 +110,12 @@ const addTeacher = () => {
     salary.value = '';
 
     displayTeachers();
-
+    calculateTotal();//7. Total
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
 // 4. Display Array of Objects in web page, using JavaScript (10)
     displayTeachers();
-
+    calculateTotal();//7. Total
 });
