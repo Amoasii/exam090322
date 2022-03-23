@@ -29,3 +29,13 @@ hr {
     border-radius: 6px;
     cursor: pointer;
 }
+
+.teachers__total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.teachers__total b {
+    margin-right: 10px;
+}
